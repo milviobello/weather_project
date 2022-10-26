@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="./my-weather-function.js"></script>
+
+    </head>
+    <body>
+        <h3>My Weather App</h3>
+        <table style="text-align:center;">
+        <tr><td>App ID :</td><td><input id="appid" value="" size="35em" onkeyup="return processEnter(event)"></td></tr>
+        <tr><td>Zip :</td><td><input id="zip" value="02125" size="35em" onkeyup="return processEnter(event);"></td></tr>
+        <tr>
+            <td colspan="2">
+                <button id="submitButton" onclick="javascript:getWeather();">Submit</button>
+                <button id="clearButton" onclick="javascript:location.reload();">Clear</button>
+            </td>
+        </tr>
+        </table>
+        <br />
+        <h3>Current Weather</h3>
+        <div id="weatherDetails">
+            <!-- Ajax call processed response goes here -->
+        </div>
+        <br />
+        <h3>Raw Response</h3>
+        <div id="ajaxRawResponse">
+            <!-- Ajax call raw response goes here -->
+        </div>
+    </body>
+</html>
